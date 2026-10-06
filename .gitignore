@@ -1,0 +1,23 @@
+bin/
+obj/
+
+.vs/
+.vscode/
+.idea/
+
+.DS_Store
+
+.env
+.env.*
+!.env.example
+
+*.user
+*.suo
+
+*.log
+
+# Certificates / private keys
+*.pem
+*.key
+*.p12
+*.pfx
