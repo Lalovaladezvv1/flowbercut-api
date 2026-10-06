@@ -114,16 +114,6 @@ builder.Services.AddSingleton<
 // Application
 // --------------------------------------------------
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("FlowbercutWeb", policy =>
-    {
-        policy
-            .WithOrigins("http://localhost:5173")
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-    });
-});
 
 builder.Services.AddCors(options =>
 {
