@@ -125,6 +125,20 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FlowbercutWeb", policy =>
+    {
+        policy
+            .WithOrigins(
+                "http://localhost:5173",
+                "https://flowbercut.com"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
